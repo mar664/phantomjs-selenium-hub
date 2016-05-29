@@ -1,0 +1,11 @@
+selhub:
+  image: selenium/hub
+  ports:
+    - 4444:4444
+
+nodephjs:
+  image: mar664/node-phantomjs
+  ports:
+    - 5900
+  links:
+    - selhub:hub
